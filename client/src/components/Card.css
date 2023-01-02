@@ -1,0 +1,37 @@
+.Cards {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin:5px;
+    padding: 25px;
+}
+
+.Card {
+    height: 10cm;
+    width: 8cm;
+    background-color: rgba(176, 176, 176, 0.311);
+    background-size: contain;
+    border-radius: 5px;
+    border-color: black;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 5px;
+    text-decoration: none;
+    color:black;
+    box-shadow: 0 8px 32px 0 rgba(28, 61, 133, 0.575);
+}
+
+.Card:hover{
+    background-color: rgba(255, 255, 255, 0.311);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.733);
+    
+}
+
+.img {
+
+    width: 250px;
+    height: 200px;
+    box-shadow: 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+}

@@ -1,0 +1,62 @@
+.body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+
+}
+.Caja{
+    display: relative;
+    column-count: 2;
+    justify-content: center;
+    align-items: center;
+    width: 30cm;
+    height: fit-content;
+    background-color: rgba(152, 152, 152, 0.473);
+    border-radius: 40px;
+    padding: 15px;
+    margin: 30px;
+    box-shadow: 0px 0px 20px 0px rgb(0, 0, 0);
+    
+}
+
+.Caja h1{
+    margin:3px;
+}
+
+
+.titulos{
+    display:flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0px;
+}
+
+
+.info{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 30cm;
+}
+
+.imagen{
+    height:270px;
+    width:310px;
+    border-radius: 20px;
+}
+
+.infofas{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px;
+    
+}
+.description{
+    text-decoration: none;
+    width: 15cm;
+    height: 8cm;
+    overflow: auto;
+    padding: 4px;
+}

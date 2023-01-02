@@ -1,0 +1,46 @@
+.landingbody{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+.landing{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    font-size: 50px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+    text-decoration: none;
+    
+}
+.landing h1{
+    margin: 0px;
+}
+
+.btn{
+    width: 140px;
+    height:35px;
+    background: #fafaf9;
+    border-color: rgb(94, 94, 94);
+    border-radius: 30px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+    font-size: 25px;
+    text-decoration: none;
+    text-align: center;
+   
+}
+
+.btn:hover{
+    width:140px;
+    height:35px;
+    background-color: rgba(255, 255, 255, 0.247);
+    color: rgb(0, 0, 0);
+    border-color:#c9c9c9;
+    border-radius: 15px;
+    cursor: pointer;
+    
+
+}
