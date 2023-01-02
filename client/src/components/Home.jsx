@@ -178,7 +178,9 @@ if(!currentVideogames.length){
 
                 {
                     currentVideogames === "404" ?
-                    <h1>Video Juego No Encontrado</h1> :
+                    <h1>Not Found Videogames whith this name.</h1>
+                    :
+                    
                         currentVideogames?.map(game => {
                         return (
                             

@@ -22,7 +22,7 @@ export const getVideogames = ()=>{
             })
 
         } catch (error) {
-            console.log(error.msg)
+            console.log(error.message)
         } 
     }
 }
@@ -37,7 +37,9 @@ export const getVideogameName = (name) => {
                 payload: json.data  //es lo q devuelve la ruta una vez q le asigno algo por name
             })
         } catch (error) {
-            console.log(error.msg)
+            dispatch({ type: "GET_VIDEOGAME_NAME",
+            payload: "404"
+        })
         }
 
     }
@@ -54,7 +56,9 @@ export const getVideogameDetails = (id) =>{
                 payload: json.data
             })
         } catch (error) {
-            console.log(error)
+            dispatch({ type: "GET_VIDEOGAME_DETAILS",
+            payload: "404"
+        })
         }
     }
 }
