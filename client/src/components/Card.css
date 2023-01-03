@@ -7,7 +7,7 @@
 }
 
 .Card {
-    height: 10cm;
+    height: 10.5cm;
     width: 8cm;
     background-color: rgba(176, 176, 176, 0.311);
     background-size: contain;
@@ -20,9 +20,10 @@
     box-shadow: 0 8px 32px 0 rgba(28, 61, 133, 0.575);
     text-shadow: 2px 2px 2px #0c0c0c33;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-inline: 10px;
 }
 .Card h2{
-    margin:10px;
+    margin:15px;
 }
 
 .Card:hover{
