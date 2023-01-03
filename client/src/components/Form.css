@@ -12,7 +12,7 @@
 .cajaTituloHuno {
     border-radius: 5px;
     justify-content: center;
-    color: rgb(0, 165, 206);
+    color: rgb(255, 255, 255);
     font-size: 40px;
     margin: 1px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -83,7 +83,7 @@
     justify-content: space-evenly;
     padding-top: 15px;
     margin: 15px;
-    color:red
+    color:rgb(255, 255, 255)
 
 }
 

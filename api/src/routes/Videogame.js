@@ -145,7 +145,7 @@ router.post("/", async (req, res) => {
             genres,
             platform,
           } = req.body;
-
+          
           let newGame = await Videogame.create({
             name,
             image,

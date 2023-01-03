@@ -22,7 +22,7 @@ export default function Home() {
         name: "",
         description: "",
         released: "",
-        rating: 1,
+        rating: "",
         genres: [],
         platform: [],
         createdByDB: true,
@@ -38,9 +38,9 @@ export default function Home() {
         let letras = /^[ a-zA-ZÀ-ÿ 0-9.]+$/;
 
         if (!letras.test(nameValue)) {
-            setError([...error, "Dont use special characters in name"])
+            setError([...error, "Dont use special characters in name."])
         } else if (!form.name) {
-            setError("You have to give a name")
+            setError("You have to give a name.")
         } else {
             setError("")
         }
@@ -64,7 +64,7 @@ export default function Home() {
     const ratingChangeHandler = (event) => {
         const raitingValue = event.target.value;
         if (!(raitingValue >= 0 && raitingValue <= 5)) {
-            setError([...error, "Must be a value between 0 and 5"])
+            setError([...error, "Must be a value between 0 and 5."])
         } else {
             setError("")
         }
@@ -120,6 +120,7 @@ export default function Home() {
         event.preventDefault();
         console.log(form)
         dispatch(createVideogame(form))
+        alert("Videogame has been submitted successfully")
         history.push("/home")
 
     }
@@ -144,17 +145,17 @@ export default function Home() {
                     <div className="cajaIngrDatos">
 
                         <div className="cajaIngrDatosLabelEInput">
-                            <label className="cajaIngrDatosLabelEInputLabel">Nombre: </label>
+                            <label className="cajaIngrDatosLabelEInputLabel">Name: </label>
                             <input className="cajaIngrDatosLabelEInputInput" type="text" onChange={nameChangeHandler} value={form.name}></input>
                         </div>
 
                         <div className="cajaIngrDatosLabelEInput">
-                            <label className="cajaIngrDatosLabelEInputLabel">Descripción:</label>
+                            <label className="cajaIngrDatosLabelEInputLabel">Description:</label>
                             <textarea type="text" className="cajaIngrDatosLabelEInputInput" onChange={descriptionChangeHandler} value={form.description}></textarea>
                         </div>
 
                         <div className="cajaIngrDatosLabelEInput">
-                            <label className="cajaIngrDatosLabelEInputLabel" >Fecha de lanzamiento:</label>
+                            <label className="cajaIngrDatosLabelEInputLabel" >Released:</label>
                             <input type="date" className="cajaIngrDatosLabelEInputInput" id="textoFechaLanzamiento" onChange={releasedChangeHandler} value={form.released}></input>
                         </div>
 
@@ -164,7 +165,7 @@ export default function Home() {
                         </div>
 
                         <div className="cajaIngrDatosLabelEInput">
-                            <label className="cajaIngrDatosLabelEInputLabel">Generos</label>
+                            <label className="cajaIngrDatosLabelEInputLabel">Genres</label>
                             <select name="" className="cajaIngrDatosLabelEInputSelect" id="" onChange={genresChangeHandler} value={form.genres} >
                                 <option value="Vacio">Seleccionar</option>
                                 {

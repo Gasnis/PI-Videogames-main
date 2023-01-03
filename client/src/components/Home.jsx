@@ -6,7 +6,6 @@ import Card from "./Card"
 import Paginated from "./Paginated"
 import { Link } from "react-router-dom"
 import SearchBar from "./SearchBar"
-import relojDeArena from "../Imagen/Loading.gif" 
 
 
 
@@ -101,7 +100,7 @@ function handleOrderByRaiting(event) {
 if(!currentVideogames.length){
     return(
         <div className="loading">
-            <img src={relojDeArena} alt="img" />
+            <img src={"https://i.gifer.com/origin/d5/d5b88b45655b89b33ff6d1dc2df982ff_w200.gif"} alt="img" height="300px" width="300px" />
             <br />
             <h1>Loading...</h1>
         </div>
@@ -111,16 +110,17 @@ if(!currentVideogames.length){
     return (
         <div className="home" >
             <div className="navbar">
-            <h1 className="title">VIDEOGAMES</h1>
-            <button className="btnhome" onClick={(e) => { handleClickRefrehes(e) }}>Refresh</button>
-            <Link to='/newvideogames'>
-                <button className="btnhome">Create</button>
-            </Link>
+            <Link to="/" className="navbarlink"><h1 className="title" >VIDEOGAMES</h1></Link>
             <SearchBar></SearchBar>
+            <Link className="navbarlink" to='/newvideogames'>
+                <h2 >Create Videogame</h2>
+            </Link>
+            <img src="http://25.media.tumblr.com/dbe486518f72879147e6b8b8f5ad9733/tumblr_mt5o1tji3x1sfmfe7o1_500.gif" alt="" height="80px" width="80px" />
             </div>
 
             <div>
                 <div className="filtros">
+                <button className="btnhome" onClick={(e) => { handleClickRefrehes(e) }}>Refresh</button>
                     <div>
                         <h4>Genres</h4>
                         {/* Aca Va el listado de los Generos */}
@@ -150,29 +150,30 @@ if(!currentVideogames.length){
 
                     <div>
                         <h4>Alphabetical</h4>
-                     
+                    
                         <select className="select" onChange={event => handleorderAscDes(event)}>
                             <option value="All">All</option>
                             <option value='ascendente'>A - Z</option>
                             <option value='descendente'>Z - A</option>
                         </select>
-
                     </div>
 
                     <div>
-                        <h4> Rating </h4>
-                
+                        <h4>Rating</h4>
                         <select className="select" onChange={event => handleOrderByRaiting(event)}>
                             <option value="All">All</option>
                             <option value='raitingmenor'>Mayor a Menor</option>
                             <option value='raitingmayor'>Menor a Mayor</option>
                         </select>
-
                     </div>
-
-
                 </div>
                 <br />
+                <Paginated
+                    videogamesPerPage={videogamesPerPage}
+                    allVideogames={allVideogames.length}
+                    paginated={paginated}
+                    currentPages={currentPages}
+                />
 
                 <div className="cajaCards">
 
@@ -190,7 +191,7 @@ if(!currentVideogames.length){
                                 )
                             })
                             
-                        }
+                }
                 </div>
                 <Paginated
                     videogamesPerPage={videogamesPerPage}

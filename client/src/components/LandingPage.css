@@ -12,12 +12,22 @@
     text-align: center;
     align-items: center;
     font-size: 50px;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-shadow: 3px 3px 3px #0c0c0c8f;
     text-decoration: none;
     
 }
 .landing h1{
     margin: 0px;
+}
+
+.landing a.a{
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration:none;
 }
 
 .btn{

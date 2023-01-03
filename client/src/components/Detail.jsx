@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from "react-redux"
 import { getVideogameDetails, cleanState } from "../redux/actions"
 import { useParams, useHistory } from "react-router-dom"
 import "./Detail.css"
-import relojDeArena from "../Imagen/Loading.gif" 
 
 import { useEffect } from "react"
 
@@ -32,11 +31,13 @@ export default function Detail() {
         history.goBack()
 
     }
+    console.log(detail);
+
     if (!detail) {
         return (
             <div className='body'>
             <div className="loading">
-                <img src={relojDeArena} alt="img" />
+                <img src={"https://i.gifer.com/origin/d5/d5b88b45655b89b33ff6d1dc2df982ff_w200.gif"} alt="img" height="300px" width="300px" />
                 <br />
                 <h1>Loading...</h1>
             </div>
@@ -63,7 +64,7 @@ export default function Detail() {
                     <p>Rating: {detail.rating}</p>
 
 
-                    <p>PLATFORMS: {detail.platform?.map(p => " - " + p)} </p>
+                    <p>PLATFORMS: {detail.platform?.map(p => p).join(" - ")}</p>
 
 
                 </div>

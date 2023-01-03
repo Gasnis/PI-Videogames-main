@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom"
 import './LandingPage.css';
-import control from "../Imagen/joystick-3d-render-icon-illustration-png.webp"
 
 
 export default function loading(){
@@ -10,10 +9,10 @@ export default function loading(){
             <div className="landing">
             
                 <h1>VIDEOGAMES</h1>
-                <Link to="/home">
+                <img src="http://25.media.tumblr.com/dbe486518f72879147e6b8b8f5ad9733/tumblr_mt5o1tji3x1sfmfe7o1_500.gif" alt="img" height="300px" whidth="300px" />
+                <Link className="a" to="/home">
                     <button className="btn">START</button>
                 </Link>
-                <img src={control} alt="img" height="300px" whidth="300px" />
 
             </div>
         </div>

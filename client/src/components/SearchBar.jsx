@@ -1,6 +1,6 @@
-import React from 'react';
-import { getVideogameName , getVideogames} from '../redux/actions';
-import { useDispatch } from 'react-redux';
+import React ,{ useState } from 'react';
+import { getVideogameName} from '../redux/actions';
+import { useDispatch} from 'react-redux';
 
 
 
@@ -8,23 +8,14 @@ export default function SearchBar(){
 
     const dispatch = useDispatch();
 
-
-
-
-
     function inputVideogameHandler(event){
-        if(!event.target.value){
-            dispatch(getVideogames());
-
-        }
-
-        event.preventDefault()
+        event.preventDefault();
         dispatch(getVideogameName(event.target.value));
     }
 
     return(
-        <div className="cajaBuscarVideoJuego">
-            <input type="text"  onChange={inputVideogameHandler} placeholder="Search Videogame" />
+        <div className="search">
+            <input className="searchTerm" type="text"  onChange={inputVideogameHandler} placeholder="Search Videogame" />
         </div>
     )
 

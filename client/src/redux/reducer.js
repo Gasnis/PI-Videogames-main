@@ -4,7 +4,7 @@ const initialState = {
     videogames : [],
     allVideogames: [],
     genres: [],
-    detail: {},
+    detail: null,
 }
 
 function rootReducer(state= initialState, action){ // en esta accion mando todos los videogames al arrglo vacio

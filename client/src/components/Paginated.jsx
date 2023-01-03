@@ -17,15 +17,15 @@ export default function Paginated({ videogamesPerPage, allVideogames, paginated,
 
 
     return(
-        <nav>
-            <ul className="paginated">
-                <button value="prev" onClick = {handlerFlechas}> Prev </button>
+        <nav className="center">
+            <ul >
+                <button className="btnPaginate" value="prev" onClick = {handlerFlechas}> Prev </button>
                 {
                     pageNumber?.map(number => (
-                        <button className={`number ${number === currentPages ? "currentPages" : ""}`} key={number} onClick={()=>paginated(number)}>{number}</button>
+                        <button className={`number ${number === currentPages ? "current" : "btnPaginate"}`} key={number} onClick={()=>paginated(number)}>{number}</button>
                     ))
                 }
-                <button value="next" onClick = {handlerFlechas}> Next </button>
+                <button className="btnPaginate" value="next" onClick = {handlerFlechas}> Next </button>
             </ul>
         </nav>
     )
