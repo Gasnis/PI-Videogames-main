@@ -1,4 +1,5 @@
 import axios from "axios";
+
 export const GET_ALL_GAMES = 'GET_ALL_GAMES';
 export const GET_VIDEOGAME_NAME = "GET_VIDEOGAME_NAME";
 export const GET_VIDEOGAME_DETAILS = "GET_VIDEOGAME_DETAILS";

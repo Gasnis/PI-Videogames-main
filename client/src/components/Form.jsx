@@ -38,9 +38,9 @@ export default function Home() {
         let letras = /^[ a-zA-ZÀ-ÿ 0-9.]+$/;
 
         if (!letras.test(nameValue)) {
-            setError([...error, "Dont use special characters in name."])
+            setError(["Dont use special characters in name."])
         } else if (!form.name) {
-            setError("You have to give a name.")
+            setError(...error, "You have to give a name.")
         } else {
             setError("")
         }

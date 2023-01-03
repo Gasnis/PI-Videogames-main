@@ -1,4 +1,4 @@
-import React ,{ useState } from 'react';
+import React from 'react';
 import { getVideogameName} from '../redux/actions';
 import { useDispatch} from 'react-redux';
 

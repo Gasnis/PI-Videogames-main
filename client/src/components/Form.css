@@ -92,6 +92,14 @@
     flex-direction: column;
 }
 
+.cajaErrores{
+    background-color: #d3d4d5;
+    border-radius: 15px;
+    color: red;
+    font:400;
+    margin: 10px;
+}
+
 :disabled {
     color: gray;
     background-color: #d3d4d5;
