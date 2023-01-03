@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from 'react-router-dom';
-import { createVideogame, getGenres, } from "../redux/actions";
+import { createVideogame, getGenres } from "../redux/actions";
 import { useDispatch, useSelector } from "react-redux";
 import './Form.css';
 
@@ -203,7 +203,7 @@ export default function Home() {
                                 <p>Generos</p>
                                 <div>
                                     {
-                                        form.genres.map(elemet => <div><span>{elemet}</span><button onClick={deleteGenresHandler} id={elemet}>x</button></div>)
+                                        form.genres.map(elemet => <div><span>{elemet}</span><button className="btn" onClick={deleteGenresHandler} id={elemet}>x</button></div>)
                                     }
                                 </div>
                             </div>

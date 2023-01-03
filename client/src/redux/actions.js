@@ -16,7 +16,7 @@ export const ORDER_BY_RAITING = "ORDER_BY_RAITING";
 export const getVideogames = ()=>{
     return async(dispatch) => {
         try {
-            const response = await axios.get("http://localhost:3001/videogames")
+            const response = await axios.get("/videogames")
             return dispatch({
                 type: "GET_ALL_GAMES",
                 payload: response.data
@@ -31,7 +31,7 @@ export const getVideogames = ()=>{
 export const getVideogameName = (name) => {
     return async(dispatch)=> {
         try {
-            var json = await axios.get(`http://localhost:3001/videogames?name=${name}`);
+            var json = await axios.get(`/videogames?name=${name}`);
             if (!json) throw Error
             return dispatch ({
                 type: "GET_VIDEOGAME_NAME",
@@ -50,7 +50,7 @@ export const getVideogameName = (name) => {
 export const getVideogameDetails = (id) =>{
     return async(dispatch)=>{
         try {
-            var json = await axios.get(`http://localhost:3001/videogames/${id}`)
+            var json = await axios.get(`/videogames/${id}`)
             if(!json) return Error
             return dispatch({
                 type: "GET_VIDEOGAME_DETAILS",
@@ -67,7 +67,7 @@ export const getVideogameDetails = (id) =>{
 // export const getVideoDetailP = (id) => {
 //     return function (dispatch) {
 //         try {
-//             return axios.get(`http://localhost:3001/videogames/${id}`)
+//             return axios.get(`/videogames/${id}`)
 //                 .then(res => {
 //                     dispatch({
 //                         type: GET_DETAIL_VIDEO_GAME,
@@ -86,7 +86,7 @@ export const getVideogameDetails = (id) =>{
 export const createVideogame = (payload)=>{
     return async(dispatch)=>{
         try {
-            var json = await axios.post(`http://localhost:3001/videogames`, payload);
+            var json = await axios.post(`/videogames`, payload);
             return json
             
         } catch (error) {
@@ -110,7 +110,7 @@ export const cleanState = () =>{
 export const getGenres = ()=>{
     return async(dispatch)=>{
         try {
-            var json = await axios.get(`http://localhost:3001/genres`)
+            var json = await axios.get(`/genres`)
             return dispatch({
                 type:"GET_GENRES",
                 payload: json.data
