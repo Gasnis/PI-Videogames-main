@@ -6,6 +6,7 @@
   justify-content: space-between;
   padding-inline: 100px;
   text-decoration: none;
+  max-width: 100%;
 }
 
 .navbarlink{

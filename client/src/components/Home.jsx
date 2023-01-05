@@ -120,7 +120,7 @@ if(!currentVideogames.length){
 
             <div>
                 <div className="filtros">
-                <button className="btnhome" onClick={(e) => { handleClickRefrehes(e) }}>Refresh</button>
+                    <button className="btnhome" onClick={(e) => { handleClickRefrehes(e) }}>Refresh</button>
                     <div>
                         <h4>Genres</h4>
                         {/* Aca Va el listado de los Generos */}
