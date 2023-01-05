@@ -20,8 +20,9 @@ function App() {
         <Route path="/detail/:id"> <Detail/> </Route>
 
         <Route path="/newvideogames"> <Form/> </Route>
-
-        <h5>Made by Gaston Saravia - Bootcamp Soy Henry - Videogames PI</h5>
+        
+        <h5 className='outro'>Made by Gaston Saravia - Bootcamp Soy Henry - Videogames PI</h5>
+        
       </div>
     
   );

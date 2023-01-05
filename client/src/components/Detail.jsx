@@ -51,6 +51,10 @@ export default function Detail() {
         <div className='body'>
 
             <div className="Caja">
+                <div className='titulos'>
+                    <h1> {detail.name} - Detail</h1>
+                    
+                </div>
 
                 <img className="imagen" src={detail.image} alt='imagen' />
                 <div>
@@ -71,9 +75,6 @@ export default function Detail() {
 
                 <br />
 
-                <div className='titulos'>
-                    <h1> {detail.name} - Details</h1>
-                </div>
 
                 <div className='description'>{detail.description}</div>
 

@@ -125,7 +125,7 @@ export default function Home() {
 
     }
 
-   
+
 
 
     // ------ Renderizado ------//
@@ -135,98 +135,84 @@ export default function Home() {
         <form onSubmit={submitHandle}>
 
             <div className="cajaFormulaio">
-                <div className="cajaTitulo">
+                <div className="Titulo">
 
-                    <h1 className="cajaTituloHuno"> CREATE VIDEOGAME </h1>
+                    <h1> CREATE VIDEOGAME </h1>
 
                 </div>
 
-                <div className="cajaDatos">
-                    <div className="cajaIngrDatos">
+                <div className="inputs">
 
-                        <div className="cajaIngrDatosLabelEInput">
-                            <label className="cajaIngrDatosLabelEInputLabel">Name: </label>
-                            <input className="cajaIngrDatosLabelEInputInput" type="text" onChange={nameChangeHandler} value={form.name}></input>
-                        </div>
+                    <div >
+                        <label>Name: </label>
+                        <input type="text" onChange={nameChangeHandler} value={form.name}></input>
+                    </div>
 
-                        <div className="cajaIngrDatosLabelEInput">
-                            <label className="cajaIngrDatosLabelEInputLabel">Description:</label>
-                            <textarea type="text" className="cajaIngrDatosLabelEInputInput" onChange={descriptionChangeHandler} value={form.description}></textarea>
-                        </div>
+                    <div>
+                        <label>Description:</label>
+                        <textarea type="text" onChange={descriptionChangeHandler} value={form.description}></textarea>
+                    </div>
 
-                        <div className="cajaIngrDatosLabelEInput">
-                            <label className="cajaIngrDatosLabelEInputLabel" >Released:</label>
-                            <input type="date" className="cajaIngrDatosLabelEInputInput" id="textoFechaLanzamiento" onChange={releasedChangeHandler} value={form.released}></input>
-                        </div>
+                    <div >
+                        <label>Released:</label>
+                        <input type="date" id="textoFechaLanzamiento" onChange={releasedChangeHandler} value={form.released}></input>
+                    </div>
 
-                        <div className="cajaIngrDatosLabelEInput">
-                            <label className="cajaIngrDatosLabelEInputLabel">Rating:</label>
-                            <input type="number" className="cajaIngrDatosLabelEInputInput" onChange={ratingChangeHandler} value={form.rating}></input>
-                        </div>
+                    <div>
+                        <label>Rating:</label>
+                        <input type="number" onChange={ratingChangeHandler} value={form.rating}></input>
+                    </div>
 
-                        <div className="cajaIngrDatosLabelEInput">
-                            <label className="cajaIngrDatosLabelEInputLabel">Genres</label>
-                            <select name="" className="cajaIngrDatosLabelEInputSelect" id="" onChange={genresChangeHandler} value={form.genres} >
-                                <option value="Vacio">Seleccionar</option>
+                    <div>
+                        <label>Genres</label>
+                        <select name="" id="" onChange={genresChangeHandler} value={form.genres} >
+                            <option value="Vacio">Seleccionar</option>
+                            {
+                                filterGenresVideoGames.map(genre => (
+                                    <option key={genre.id} value={genre.name}>{genre.name}</option>
+                                ))
+                            }
+                        </select>
+                        <div className="plaformasDiv">
+                            <div>
                                 {
-                                    filterGenresVideoGames.map(genre => (
-                                        <option key={genre.id} value={genre.name}>{genre.name}</option>
-                                    ))
+                                    form.genres.map(elemet => <button className="btn" onClick={deleteGenresHandler} id={elemet}>{elemet}</button>)
                                 }
-                            </select>
-                        </div>
-
-                        <div className="cajaIngrDatosLabelEInput">
-                            <label className="cajaIngrDatosLabelEInputLabel">Platforms</label>
-                            <select name="" className="cajaIngrDatosLabelEInputSelect" id="" onChange={platformsChangeHandler} value={form.platform}>
-                                <option value="Vacio">Seleccionar</option>
-                                <option value="PC">PC</option>
-                                <option value="Nintendo">Nintendo</option>
-                                <option value="Nintendo switch">Nintendo switch</option>
-                                <option value="Xbox 360">Xbox 360</option>
-                                <option value="Play Station">Play Station</option>
-                                <option value="Play Station 2">Play Station 2</option>
-                                <option value="Play Station 3">Play Station 3</option>
-                                <option value="Play Station 4">Play Station 4</option>
-                                <option value="Xbox One">Xbox One</option>
-                                <option value="Xbox Series">Xbox Series</option>
-                            </select>
-                        </div>
-
-                    </div>
-
-                    <div className="cajaIngrDatos">
-
-                        <div className="cajaIngrDatosLabelEInput">
-
-                            <div className="plaformasDiv">
-                                <p>Generos</p>
-                                <div>
-                                    {
-                                        form.genres.map(elemet => <div><span>{elemet}</span><button className="btn" onClick={deleteGenresHandler} id={elemet}>x</button></div>)
-                                    }
-                                </div>
                             </div>
                         </div>
+                    </div>
 
-                        <div className="cajaIngrDatosLabelEInput">
-                            <div className="plaformasDiv">
-                                <p>Plataformas</p>
-                                <div>
-                                    {
-                                        form.platform.map(elemet => <div><span>{elemet}</span><button onClick={deletePlaformsHandler} id={elemet}>x</button></div>)
-                                    }
-
-                                </div>
+                    <div>
+                        <label>Platforms</label>
+                        <select name="" id="" onChange={platformsChangeHandler} value={form.platform}>
+                            <option value="Vacio">Seleccionar</option>
+                            <option value="PC">PC</option>
+                            <option value="Nintendo">Nintendo</option>
+                            <option value="Nintendo switch">Nintendo switch</option>
+                            <option value="Xbox 360">Xbox 360</option>
+                            <option value="Play Station">Play Station</option>
+                            <option value="Play Station 2">Play Station 2</option>
+                            <option value="Play Station 3">Play Station 3</option>
+                            <option value="Play Station 4">Play Station 4</option>
+                            <option value="Xbox One">Xbox One</option>
+                            <option value="Xbox Series">Xbox Series</option>
+                        </select>
+                        <div className="plaformasDiv">
+                            <div>
+                                {
+                                    form.platform.map(elemet => <button className="btn" onClick={deletePlaformsHandler} id={elemet}>{elemet}</button>)
+                                }
 
                             </div>
-                        </div>
 
-                        <div className="cajaErrores">
-                            {error && <p>{error}</p>}
                         </div>
-
                     </div>
+
+                    <div className="cajaErrores">
+                        {error && <p>{error}</p>}
+                    </div>
+
+
                 </div>
 
                 <nav className="cajaBarraBotones">

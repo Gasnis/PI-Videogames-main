@@ -1,4 +1,4 @@
-import { GET_ALL_GAMES, GET_VIDEOGAME_NAME, GET_GENRES, GET_VIDEOGAME_DETAILS, FILTER_APIBD, FILTER_GAMES_BY_GENRES, ORDER_BY_ASC_DES,CLEAN_DETAIL, ORDER_BY_RAITING } from "./actions"
+import { GET_ALL_GAMES, GET_VIDEOGAME_NAME, GET_GENRES, GET_VIDEOGAME_DETAILS, FILTER_APIBD, FILTER_GAMES_BY_GENRES, ORDER ,CLEAN_DETAIL } from "./actions"
 
 const initialState = {
     videogames : [],
@@ -84,11 +84,11 @@ function rootReducer(state= initialState, action){ // en esta accion mando todos
         //         genres: genresFilter,
         //     }
 
-        case ORDER_BY_ASC_DES:
+        case ORDER:
 
-            let obrderByAscDesc = state.videogames
-            action.payload === 'ascendente' ?
-                obrderByAscDesc.sort(function (a, b) {
+            let order = state.videogames
+            if(action.payload === 'ascendente'){
+                order = order.sort(function (a, b) {
                     if (a.name > b.name) {
                         return 1;
                     }
@@ -96,8 +96,10 @@ function rootReducer(state= initialState, action){ // en esta accion mando todos
                         return -1;
                     }
                     return 0
-                }) :
-                obrderByAscDesc.sort(function (a, b) {
+                })
+            }
+            if(action.payload === "descendente"){
+                order = order.sort(function (a, b) {
                     if (a.name > b.name) {
                         return -1;
                     }
@@ -106,44 +108,33 @@ function rootReducer(state= initialState, action){ // en esta accion mando todos
                     }
                     return 0
                 })
-            return {
-
-                ...state,
-                videogames: obrderByAscDesc
-
+            }
+            if(action.payload === 'raitingmayor'){
+                order = order.sort(function (a, b) {
+                    if (a.rating > b.rating) {
+                        return 1;
+                    }
+                    if (b.rating > a.rating) {
+                        return -1;
+                    }
+                    return 0
+                })
+            }
+            if(action.payload === "raitingmenor"){
+                order = order.sort(function (a, b) {
+                    if (a.rating > b.rating) {
+                        return -1;
+                    }
+                    if (b.rating > a.rating) {
+                        return 1;
+                    }
+                    return 0
+                })
             }
 
-            case ORDER_BY_RAITING:
-
-            let filterOrderByRaiting = state.videogames
-                if(action.payload === 'raitingmayor'){
-                    filterOrderByRaiting = filterOrderByRaiting.sort(function (a, b) {
-                        if (a.rating > b.rating) {
-                            return 1;
-                        }
-                        if (b.rating > a.rating) {
-                            return -1;
-                        }
-                        return 0
-                    })
-                }
-                if(action.payload === "raitingmenor"){
-                    filterOrderByRaiting = filterOrderByRaiting.sort(function (a, b) {
-                        if (a.rating > b.rating) {
-                            return -1;
-                        }
-                        if (b.rating > a.rating) {
-                            return 1;
-                        }
-                        return 0
-                    })
-                }
-                
             return {
-
                 ...state,
-                videogames: filterOrderByRaiting
-
+                videogames: order
             }
         
             default:    

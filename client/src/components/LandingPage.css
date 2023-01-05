@@ -11,14 +11,17 @@
     flex-direction: column;
     text-align: center;
     align-items: center;
-    font-size: 50px;
+    font-size: 30px;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-shadow: 3px 3px 3px #0c0c0c8f;
     text-decoration: none;
+    width: max-content;
+    height: max-content;
     
 }
 .landing h1{
     margin: 0px;
+    flex-wrap: wrap;
 }
 
 .landing a.a{
@@ -31,8 +34,8 @@
 }
 
 .btn{
-    width: 140px;
-    height:35px;
+    width: fit-content;
+    height:fit-content;
     background: #fafaf9;
     border-color: rgb(94, 94, 94);
     border-radius: 30px;
@@ -44,8 +47,8 @@
 }
 
 .btn:hover{
-    width:140px;
-    height:35px;
+    width: fit-content;
+    height:fit-content;
     background-color: rgba(255, 255, 255, 0.247);
     color: rgb(0, 0, 0);
     border-color:#c9c9c9;

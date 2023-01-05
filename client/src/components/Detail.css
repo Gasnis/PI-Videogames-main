@@ -2,36 +2,37 @@
     display: flex;
     justify-content: center;
     align-items: center;
-   
+    flex-direction: column;
+    flex-wrap: wrap;
 
 }
 .Caja{
-    display: relative;
-    column-count: 2;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 30cm;
-    height: fit-content;
+    width: 12cm;
+    height: 18cm;
     background-color: rgba(152, 152, 152, 0.473);
-    border-radius: 40px;
+    border-radius: 20px;
     padding: 15px;
     margin: 30px;
     box-shadow: 0px 0px 20px 0px rgb(0, 0, 0);
-    text-shadow: 2px 2px 2px #0c0c0c3b;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow Bold', Arial, sans-serif ;
     
 }
 
 .Caja h1{
     margin:3px;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.356);
 }
 
 
 .titulos{
     display:flex;
     justify-content: center;
-    align-items: flex-start;
-    margin: 0px;
+    align-items: center;
+    margin: 2px;
 }
 
 
@@ -39,12 +40,11 @@
     display:flex;
     justify-content: center;
     align-items: center;
-    width: 30cm;
 }
 
 .imagen{
     height:270px;
-    width:310px;
+    width:350px;
     border-radius: 20px;
 }
 
@@ -52,12 +52,11 @@
     display:flex;
     justify-content: center;
     align-items: center;
-    margin: 2px;
-    
+    margin: 3px;
 }
+
 .description{
     text-decoration: none;
-    width: 15cm;
     height: 8cm;
     overflow: auto;
     padding: 4px;

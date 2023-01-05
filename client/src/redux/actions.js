@@ -8,8 +8,8 @@ export const GET_GENRES = 'GET_GENRES';
 export const FILTER_GAMES_BY_GENRES = "FILTER_GAMES_BY_GENRES";
 export const FILTER_DBGAMES_BY_GENRE = "FILTER_DBGAMES_BY_GENRE";
 export const FILTER_APIBD = "FILTER_APIBD";
-export const ORDER_BY_ASC_DES = "ORDER_BY_ASC_DES";
-export const ORDER_BY_RAITING = "ORDER_BY_RAITING";
+export const ORDER = "ORDER";
+
 
 
 
@@ -142,19 +142,10 @@ export const filterGamesByGenres = (payload) => {
 
 
 
-export const orderAscDes = (payload) => {
+export const order = (payload) => {
 
     return {
-        type: "ORDER_BY_ASC_DES",
-        payload
-    }
-
-}
-
-export const orderByRaiting = (payload) => {
-
-    return {
-        type: "ORDER_BY_RAITING",
+        type: "ORDER",
         payload
     }
 
