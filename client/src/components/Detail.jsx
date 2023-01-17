@@ -1,10 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from "react-redux"
 import { getVideogameDetails, cleanState } from "../redux/actions"
 import { useParams, useHistory } from "react-router-dom"
 import "./Detail.css"
-
-import { useEffect } from "react"
 
 
 export default function Detail() {
