@@ -104,7 +104,9 @@ export default function Home() {
         <Link to="/" className="navbarlink">
           <h1 className="title">VIDEOGAMES</h1>
         </Link>
-        <SearchBar></SearchBar>
+        <SearchBar
+        paginated={paginated}
+        />
         <Link className="navbarlink" to="/newvideogames">
           <h2>Create Videogame</h2>
         </Link>

@@ -11,6 +11,7 @@ export default function SearchBar(){
     function inputVideogameHandler(event){
         event.preventDefault();
         dispatch(getVideogameName(event.target.value));
+        paginated(1);
     }
 
     return(
