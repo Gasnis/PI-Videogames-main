@@ -21,7 +21,8 @@ export default function Home() {
   // DEFINIR ESTADOS LOCALES
 
   const [orden, setOrder] = useState("");
-  console.log(orden);
+  // console.log(orden);
+  // hola
 
   const [currentPages, setCurrentPage] = useState(1);
 
@@ -40,6 +41,7 @@ export default function Home() {
   const paginated = (pageNumber) => {
     setCurrentPage(pageNumber);
   };
+
 
   // USE EFFECTS
 
