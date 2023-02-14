@@ -4,7 +4,7 @@ import { useDispatch} from 'react-redux';
 
 
 
-export default function SearchBar(){
+export default function SearchBar({paginated}){
 
     const dispatch = useDispatch();
 

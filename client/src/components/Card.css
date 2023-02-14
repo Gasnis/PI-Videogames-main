@@ -17,7 +17,7 @@
     flex-wrap: wrap;
     text-decoration: none;
     color:black;
-    box-shadow: 0 8px 32px 0 rgba(28, 61, 133, 0.575);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.975);
     text-shadow: 2px 2px 2px #0c0c0c33;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     padding-inline: 10px;
@@ -27,10 +27,10 @@
 }
 
 .Card:hover{
-    background-color: rgba(255, 255, 255, 0.311);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.733);
-    
+    background-color: rgba(255, 255, 255, 0.408);
+    box-shadow: 0 0px 35px 10px rgba(0, 0, 0, 0.645);
 }
+
 
 .img {
 

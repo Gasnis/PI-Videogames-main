@@ -37,16 +37,3 @@
     transform: rotate(360deg);
   }
 }
-
-.outro{
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: 11px;
-  margin-top: 20px;
-  margin-bottom: 0px;
-  padding: 2px;
-  width: 100%;
-  background-color: rgb(255, 255, 255);
-}

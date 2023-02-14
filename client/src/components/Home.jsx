@@ -88,8 +88,8 @@ export default function Home() {
         <img
           src={loading}
           alt="img"
-          height="300px"
-          width="300px"
+          height="150px"
+          width="150px"
         />
         <br />
         <h1>Loading...</h1>
@@ -109,12 +109,14 @@ export default function Home() {
         <Link className="navbarlink" to="/newvideogames">
           <h2>Create Videogame</h2>
         </Link>
-        <img
-          src="http://25.media.tumblr.com/dbe486518f72879147e6b8b8f5ad9733/tumblr_mt5o1tji3x1sfmfe7o1_500.gif"
-          alt=""
-          height="80px"
-          width="80px"
-        />
+        <a target={"a"} href="https://buscaminas.eu/">
+          <img
+            src="http://25.media.tumblr.com/dbe486518f72879147e6b8b8f5ad9733/tumblr_mt5o1tji3x1sfmfe7o1_500.gif"
+            alt=""
+            height="80px"
+            width="80px"
+          />
+        </a>
       </div>
 
       <div>

@@ -5,6 +5,7 @@ import Detail from './components/Detail'
 import Form from './components/Form';
 import Loading from './components/LandingPage';
 import axios from "axios";
+// axios.defaults.baseURL = "http://localhost:3001";
 axios.defaults.baseURL = "https://pi-videogames-main-production-b647.up.railway.app/"
 
 function App() {
@@ -21,7 +22,6 @@ function App() {
 
         <Route path="/newvideogames"> <Form/> </Route>
         
-        <h5 className='outro'>Made by Gaston Saravia - Bootcamp Soy Henry - Videogames PI</h5>
         
       </div>
     
