@@ -12,6 +12,7 @@ import Card from "./Card";
 import Paginated from "./Paginated";
 import { Link } from "react-router-dom";
 import SearchBar from "./SearchBar";
+import loading from "../../..//client/src/Imagen/loading-gif.gif"
 
 export default function Home() {
   const dispatch = useDispatch();
@@ -85,9 +86,7 @@ export default function Home() {
     return (
       <div className="loading">
         <img
-          src={
-            "https://i.gifer.com/origin/d5/d5b88b45655b89b33ff6d1dc2df982ff_w200.gif"
-          }
+          src={loading}
           alt="img"
           height="300px"
           width="300px"
