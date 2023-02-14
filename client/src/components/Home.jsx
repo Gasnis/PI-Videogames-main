@@ -12,7 +12,7 @@ import Card from "./Card";
 import Paginated from "./Paginated";
 import { Link } from "react-router-dom";
 import SearchBar from "./SearchBar";
-import loading from "../../..//client/src/Imagen/loading-gif.gif"
+import loading from "../Imagen/loading-gif.gif"
 
 export default function Home() {
   const dispatch = useDispatch();
