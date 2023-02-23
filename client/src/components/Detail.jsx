@@ -46,7 +46,7 @@ export default function Detail() {
 
         <img className="imagen" src={detail.image} alt="imagen" />
         <div>
-          <p>Genres: {detail.genres?.map((g) => g)}</p>
+          <p>Genres: {detail.genres?.join(" - ")}</p>
 
           <p>Released: {detail.released} </p>
 
