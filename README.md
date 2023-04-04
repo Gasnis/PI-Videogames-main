@@ -24,7 +24,8 @@ El proyecto tendrá una duración máxima de tres semanas. En el caso de que com
  2. Clonar el repositorio en sus computadoras para comenzar a trabajar
 
 Tendrán un `boilerplate` con la estructura general tanto del servidor como de cliente.
-
+ 
+ 
 __IMPORTANTE:__ Es necesario contar minimamente con la última versión estable de Node y NPM. Asegurarse de contar con ella para poder instalar correctamente las dependecias necesarias para correr el proyecto.
 
 Actualmente las versiónes necesarias son:
