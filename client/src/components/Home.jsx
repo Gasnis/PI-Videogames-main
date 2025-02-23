@@ -82,20 +82,7 @@ export default function Home() {
   }
 
   // MI HOME!!
-  if (!currentVideogames.length) {
-    return (
-      <div className="loading">
-        <img
-          src={loading}
-          alt="img"
-          height="150px"
-          width="150px"
-        />
-        <br />
-        <h1>Loading...</h1>
-      </div>
-    );
-  }
+ 
 
   return (
     <div className="home">
@@ -171,13 +158,23 @@ export default function Home() {
             </select>
           </div>
         </div>
+        
         <br />
-        <Paginated
-          videogamesPerPage={videogamesPerPage}
-          allVideogames={allVideogames.length}
-          paginated={paginated}
-          currentPages={currentPages}
+        {
+  !currentVideogames.length && (
+    <section className="loading">
+      <figure>
+        <img 
+          src={loading} 
+          alt="Loading animation" 
+          width="150" 
+          height="150" 
         />
+      </figure>
+      <h1>Loading...</h1>
+    </section>
+  )
+}
 
         <div className="cajaCards">
           {currentVideogames === "404" ? (
