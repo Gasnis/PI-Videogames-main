@@ -43,6 +43,10 @@ const { Videogame, Genre } = sequelize.models;
 Videogame.belongsToMany(Genre, { through: "game_genre" });
 Genre.belongsToMany(Videogame, { through: "game_genre" });
 
+sequelize.authenticate()
+  .then(() => console.log("✅ Conectado a PostgreSQL en Railway"))
+  .catch(err => console.error("❌ Error de conexión:", err));
+
 module.exports = {
   ...sequelize.models, // para importar modelos así: const { Product, User } = require('./db.js');
   conn: sequelize,     // para importar la conexión { conn } = require('./db.js');
